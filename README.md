@@ -14,10 +14,23 @@ Position a circular tracking region on a feature, hit start, and play through th
 
 ## Download
 
-Releases are coming soon. For now, build from source.
+[Download v0.9 beta (macOS)](https://github.com/lofi-fx/planar-stabilizer/releases/tag/v0.9-beta)
+
+## Installing the plugin
+
+The plugin is unsigned, so macOS will block it the normal way. To install:
+
+1. **Extract the zip** — double-click the downloaded file. You'll see `LofiFxPlanarStabilizer.ofx.bundle`.
+2. **Move it into place** — in Finder, press `Cmd+Shift+G`, type `/Library/OFX/Plugins/`, and hit Go. Drag `LofiFxPlanarStabilizer.ofx.bundle` into that folder.
+3. **Bypass Gatekeeper** — open **System Settings > Privacy & Security**. Scroll down. Next to *"LofiFxPlanarStabilizer was blocked from loading"* click **Allow Anyway**.
+4. If you don't see the message, open **Terminal** (from Applications/Utilities), paste this, and press Enter:
+   ```
+   sudo xattr -rd com.apple.quarantine /Library/OFX/Plugins/LofiFxPlanarStabilizer.ofx.bundle
+   ```
+   You'll be asked for your password. Type it (nothing will show as you type) and press Enter.
+5. Restart DaVinci Resolve. The plugin appears under **LoFi FX Planar Stabilizer** in the OFX effects list.
 
 ## Building from source
-
 ```
 cmake -B build -DCMAKE_BUILD_TYPE=Release
 cmake --build build -j$(sysctl -n hw.ncpu)
@@ -34,12 +47,6 @@ sudo cmake --build build --target install_local
 ```
 
 Or copy `build/LofiFxPlanarStabilizer.ofx.bundle` to `/Library/OFX/Plugins/`. Restart Resolve — the plugin appears under **LoFi FX Planar Stabilizer** in the OFX effects list.
-
-The plugin is unsigned, so macOS may block it. If needed, run:
-
-```
-sudo xattr -rd com.apple.quarantine /Library/OFX/Plugins/LofiFxPlanarStabilizer.ofx.bundle
-```
 
 ## Status
 
