@@ -1,6 +1,6 @@
-# LoFi FX Planar Stabilizer
+# FX Planar Stabilizer
 
-A planar tracking stabilizer plugin for DaVinci Resolve (OFX). Locks a tracked feature in place across frames using GPU-accelerated warp — designed for locked-off or parallax-free movement when a tripod isn't an option.
+A planar tracking stabilizer plugin for DaVinci Resolve (OFX). Locks a tracked feature in place across frames using GPU-accelerated warp — designed for locked-off or parallax-free movement when a tripod isn't an option. This plugin works inside the color page, allowing you to achieve planar stabilization without the hassle of Fusion comps.
 
 Position a circular tracking region on a feature, hit start, and play through the clip. The plugin tracks the feature frame-by-frame using Normalized Cross-Correlation and warps the output to hold it steady. Track data persists with the clip so re-opens and re-renders stay consistent.
 
@@ -9,7 +9,6 @@ Position a circular tracking region on a feature, hit start, and play through th
 - **Single-feature tracking** — position a circular tracking region, NCC matching against the reference frame with multi-pass search for sub-pixel accuracy
 - **Translation and rotation stabilization** — stabilize X/Y position and optionally rotation, with adjustable stabilization amount
 - **Auto zoom** — automatically computes the minimum crop zoom to hide stabilized edges
-- **Metal GPU warp** — bilinear-sampled framebuffer warp via Metal compute shader, operating on Resolve's native texture pointers
 - **On-screen overlay** — green tracking-region circle and crosshair rendered live on the output image
 
 ## Download
