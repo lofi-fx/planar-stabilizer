@@ -1,4 +1,4 @@
-# FX Planar Stabilizer
+# Planar Stabilizer
 
 A planar tracking stabilizer plugin for DaVinci Resolve (OFX). Locks a tracked feature in place across frames using GPU-accelerated warp — designed for locked-off or parallax-free movement when a tripod isn't an option. This plugin works inside the color page, allowing you to achieve planar stabilization without the hassle of Fusion comps.
 
